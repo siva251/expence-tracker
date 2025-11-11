@@ -81,11 +81,12 @@ The Expense Tracker backend includes automated tests to ensure API endpoints and
 Testing is done using:
 Jest → JavaScript testing framework for running test suites.
 Supertest → For making HTTP assertions (API request/response testing).
-
+```
 expense-tracker-service/
 │
 ├── tests/
 │   └── expenses.test.js      # Jest test file
+```
 
 Running the Tests
 Step 1: Install Test Dependencies
