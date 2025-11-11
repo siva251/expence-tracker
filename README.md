@@ -6,6 +6,98 @@
 
 **Candidate Name:**SIVA KUMAR B
 
+# 💰 Expense Tracker — Full Stack (React + Node.js + Express)
+
+A full-stack **Expense Tracking Application** built using **React (frontend)** and **Node.js/Express (backend)**.  
+This project follows an **API-first, headless architecture**, where the backend exposes REST APIs consumed by the React client.
+
+---
+
+## 🚀 Features
+
+- Add, edit, delete, and view expenses.
+- RESTful API (CRUD operations).
+- Input validation and error handling.
+- In-memory database for simplicity (can be extended to MongoDB/MySQL easily).
+- Modern UI using **Material-UI (MUI)**.
+- Modular structure — Controllers, Routes, Models separated.
+- Unit testing with **Jest** and **Supertest**.
+- Environment variable support using `.env`.
+
+---
+
+## 🗂️ Folder Structure
+
+expense-tracker/
+│
+├── src/
+│ ├── components/ # Reusable UI Components
+│ │ ├── ExpenseForm.jsx
+│ │ ├── ExpenseList.jsx
+│ │ └── EditExpenseModal.jsx
+│ ├── App.jsx # Main App Component
+│ └── index.js
+└── package.json
+│
+├── expense-tracker-service/ # Node.js Backend
+│ ├── controllers/ # Business logic layer
+│ │ └── expenses.controller.js
+│ ├── models/ # In-memory data model
+│ │ └── expense.model.js
+│ ├── routes/ # Express routes
+│ │ └── expenses.routes.js
+│ ├── tests/ # Unit and integration tests
+│ │ └── expenses.test.js
+│ ├── server.js # Main server entry point
+│ ├── .env
+│ ├── package.json
+│ └── README.md
+│
+└── README.md # Project root documentation
+
+---
+
+## 🧠 Tech Stack
+
+### **Frontend**
+- React.js (Hooks)
+- Material-UI (MUI)
+- Axios
+
+### **Backend**
+- Node.js
+- Express.js
+- dotenv (for environment variables)
+- Jest + Supertest (for testing)
+
+---
+
+### 🧪 Testing Documentation
+Overview
+
+The Expense Tracker backend includes automated tests to ensure API endpoints and core logic work as expected.
+Testing is done using:
+Jest → JavaScript testing framework for running test suites.
+Supertest → For making HTTP assertions (API request/response testing).
+
+expense-tracker-service/
+│
+├── tests/
+│   └── expenses.test.js      # Jest test file
+
+Running the Tests
+Step 1: Install Test Dependencies
+From your backend directory (expense-tracker-service): npm install --save-dev jest supertest cross-env
+
+Step 2: Update your package.json scripts
+In expense-tracker-service/package.json, add or modify:
+"scripts": {
+  "test": "cross-env NODE_ENV=test jest --runInBand"
+}
+
+Step 3: Run Tests
+Now you can execute tests from the backend folder: npm test
+
 
 ---
 
