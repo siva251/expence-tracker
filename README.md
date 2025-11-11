@@ -28,7 +28,8 @@ This project follows an **API-first, headless architecture**, where the backend 
 
 ## 🗂️ Folder Structure
 
-expense-tracker/
+```
+ccep-technical-exercise/
 │
 ├── src/
 │ ├── components/ # Reusable UI Components
@@ -54,6 +55,7 @@ expense-tracker/
 │ └── README.md
 │
 └── README.md # Project root documentation
+```
 
 ---
 
