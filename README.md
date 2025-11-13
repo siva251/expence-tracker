@@ -74,6 +74,18 @@ ccep-technical-exercise/
 
 ---
 
+## ⚙️ API Endpoints Documentation
+
+| HTTP Method | Endpoint | Description | Request Body | Success Response | Status Codes |
+|--------------|-----------|--------------|---------------|------------------|---------------|
+| **POST** | `/api/v1/expenses` | Create a new expense | `{ "description": "Lunch", "amount": 200, "category": "Food", "user_id": "u123" }` | Returns created expense | 201 (Created), 400 (Validation Error) |
+| **GET** | `/api/v1/expenses` | Retrieve all expenses | — | Returns array of expenses | 200 (OK) |
+| **PUT** | `/api/v1/expenses/:id` | Update an existing expense | `{ "amount": 250 }` | Returns updated expense | 200 (OK), 400 (Bad Request), 404 (Not Found) |
+| **DELETE** | `/api/v1/expenses/:id` | Delete an expense | — | No content | 204 (No Content), 404 (Not Found) |
+| **GET** | `/` | Health check endpoint | — | `{ message: "Expense Tracker Microservice is running!" }` | 200 (OK) |
+
+---
+
 ### 🧪 Testing Documentation
 Overview
 
@@ -89,6 +101,7 @@ expense-tracker-service/
 ```
 
 Running the Tests
+
 Step 1: Install Test Dependencies
 From your backend directory (expense-tracker-service): npm install --save-dev jest supertest cross-env
 
@@ -103,6 +116,30 @@ Now you can execute tests from the backend folder: npm test
 
 
 ---
+
+### 🔐 Production Deployment Preparation
+
+Before production deployment, the following key measures will be applied:
+
+**Environment Variables**:
+The .env file will be excluded from production. Sensitive data will be managed securely using services like AWS Secrets Manager or platform-specific configs.
+
+**Authentication**:
+A login feature will be added for user-specific expense tracking.
+
+**JWT Authorization**:
+APIs will require a valid JWT token (Authorization: Bearer <token>) to ensure secure and authorized access.
+
+
+---
+
+### 🌍 Future Enhancements
+
+✅ Persistent database (MongoDB or PostgreSQL)
+✅ Authentication with JWT
+✅ Role-based authorization
+✅ Cloud deployment (AWS / Render)
+✅ Dockerization for containerized deployment
 
 
 ## Objective
