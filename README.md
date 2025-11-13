@@ -136,9 +136,13 @@ APIs will require a valid JWT token (Authorization: Bearer <token>) to ensure se
 ### 🌍 Future Enhancements
 
 ✅ Persistent database (MongoDB or PostgreSQL)
+
 ✅ Authentication with JWT
+
 ✅ Role-based authorization
+
 ✅ Cloud deployment (AWS / Render)
+
 ✅ Dockerization for containerized deployment
 
 
