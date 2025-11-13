@@ -145,6 +145,7 @@ APIs will require a valid JWT token (Authorization: Bearer <token>) to ensure se
 
 ✅ Dockerization for containerized deployment
 
+---
 
 ## Objective
 Design and implement a simple microservice that adheres to **MACH architecture principles**:
